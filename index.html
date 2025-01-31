@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Universitysamling</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="start.js" defer></script>  
+</head>
+<body>
+    <header>
+        <h1>Universitet API demo</h1>
+        <form id="search-form">
+            <input type="text" id="searchInput" class="searchName" placeholder="Sök Universitet land..." required />
+            <select id="results-count">
+                <option value="3">3</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+            </select>
+            <button type="submit" id="btnSearch">Sök</button>
+        </form>
+    </header>
+
+    <main>
+        <section id="universities-container"></section>
+    </main>
+
+    <footer>
+        <div class="page-buttons">
+            <button id="prev-page-button" class="ppBtn">←</button>
+            <p id="page-count">SUZAN WEBBSIDAN</p>
+            <button id="next-page-button" class="npBtn">→</button>
+        </div>
+        <h2>Kul att blända Universitets på min webbsida</h2>
+    </footer>
+</body>
+</html>

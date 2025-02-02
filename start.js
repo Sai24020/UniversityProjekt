@@ -31,6 +31,7 @@ async function fetchUniversities(query, count) {
 
         // Hämta universitet
         const response = await fetch(endpoint);
+        event.preventDefault();
         if (!response.ok) throw new Error(`Error fetching universities: ${response.status}`);
         
         const data = await response.json();
@@ -74,7 +75,7 @@ function setCountryBackground(flagUrl) {
         body.style.backgroundSize = 'cover';
         body.style.backgroundPosition = 'center';
         body.style.backgroundAttachment = 'fixed';
-        body.style.transition = 'background-image 0.5s ease-in-out';
+     //   body.style.transition = 'background-image 0.5s ease-in-out';
     }
 }
 
@@ -99,10 +100,13 @@ function createUniversityCard(university) {
     return `
     <article id="${university.name}" class="university-card">
         <figure>
-            <div class="status-indicator red"></div> <!-- Indikator för gillning -->
+            <div class="status-indicator red" style="color: blue;"></div> <!-- Indikator för gillning -->
+            <div>
             <label for="${university.name}">${university.country}</label>
-            <input class="like-checkbox" id="${university.name}" type="checkbox" data-university-name="${university.name}">
-        </figure>
+            <span>Spara:</span>
+            <input class="like-checkbox" id="${university.name}" type="checkbox" data-university-name="${university.name} style=" display: inline-block;">
+            </div>
+            </figure>
         <h2>${university.name}</h2>
         <a href="${university.web_pages ? university.web_pages[0] : '#'}" target="_blank">
             Besök universitetets webbplats

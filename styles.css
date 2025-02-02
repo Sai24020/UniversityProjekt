@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+  
     color: #ffffff;
     text-align: center;
     padding: 30px 20px;
@@ -28,8 +28,9 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-   
-    text-shadow: 1px 4px 4px #119c57;
+    background-color: yellow;
+    text-shadow: 1px 4px 4px #0b0ff8;
+
 }
 
 form {
@@ -66,7 +67,8 @@ button:hover {
     background-color: #0056b3;
 }
 
-#universities-container {
+#universities-container,
+#universities-spara {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
@@ -163,7 +165,7 @@ article a:hover {
 
 @media (max-width: 768px) {
     form {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
@@ -171,13 +173,15 @@ article a:hover {
         width: 100%;
     }
 
-    #universities-container {
+    #universities-container,
+    #universities-spara {
         padding: 15px;
     }
 
     article h2 {
         font-size: 1.1rem;
     }
+
 }
 
 /* Statusindikator */
@@ -188,20 +192,21 @@ article a:hover {
     position: absolute;
     top: 10px;
     left: 10px;
+    display: inline-block;
 }
 
 .red {
-    background-color: red;
+    background-color: rgb(64, 119, 247);
 }
 
 .green {
-    background-color: green;
+    background-color: rgb(255, 0, 4);
 }
 
 /* Innehåll i kortet */
 .university-card-content {
     padding: 15px;
-    background-color: #64797f;
+    background-color: #167b97;
     text-align: center;
     color: white;
 }
@@ -232,7 +237,7 @@ article a:hover {
 
 /* Styling för checkbox */
 .university-card label {
-    display: inline-block;
+   
     font-size: 1rem;
     margin-top: 10px;
     background-color: #ddd;
@@ -243,7 +248,7 @@ article a:hover {
 }
 
 .university-card input[type="checkbox"] {
-    display:block; /* Göm checkbox */
+    display: inline-block; /* Göm checkbox */
     cursor: pointer;
     background-color: #844a4a;
 }
@@ -253,13 +258,15 @@ article a:hover {
 }
 
 footer {
-    background-color: #007bff;
-    color: #ffffff;
+   /* background-color: #007bff;*/
+    color: #3c06dd;
     text-align: center;
-    padding: 30px 20px;
     margin-top: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
+   h2 {
+    background-color: yellow;
+    font-weight: 700;
+   }
 
     p {
         padding: 15px;

@@ -30,7 +30,7 @@ header h1 {
     font-weight: 700;
     background-color: yellow;
     text-shadow: 1px 4px 4px #0b0ff8;
-
+   
 }
 
 form {
@@ -265,7 +265,9 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    h2 {
     background-color: yellow;
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-family:  "Island Moments", serif;
    }
 
     p {

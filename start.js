@@ -164,7 +164,6 @@ formEl.addEventListener("submit", (event) => {
         fetchUniversities(query, count);
         latestQuery = query;
         inputEl.value = "";
-        setCountryBackground(flagUrl);
     }
 });
 
